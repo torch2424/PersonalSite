@@ -3,6 +3,13 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+/*The font "Caviar dreams" */
+@font-face
+{
+    font-family: siteFont;
+    src: url(/fonts/CaviarDreams.ttf);
+}
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -11,6 +18,9 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 }
 
 body {
+
+  font-family: siteFont;
+  font-size: 2.5em;
   padding: 0;
 }
 
@@ -50,7 +60,14 @@ body {
 /* Main marketing message and sign up button */
 .jumbotron {
   text-align: center;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 5px solid #e5e5e5;
+  /* float our main image */
+  img
+  {
+    /* Give the image rounded corners and a box shadow */
+    border-radius: 15px;
+    box-shadow: 10px 10px 5px #ccc;
+  }
 
   .btn {
     font-size: 21px;
