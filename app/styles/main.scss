@@ -20,7 +20,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 body {
 
   font-family: siteFont;
-  font-size: 2.5em;
+  font-size: 1.5em;
   padding: 0;
 }
 
@@ -61,12 +61,14 @@ body {
 .jumbotron {
   text-align: center;
   border-bottom: 5px solid #e5e5e5;
+  box-shadow: 10px 10px 5px #ccc;
   /* float our main image */
   img
   {
     /* Give the image rounded corners and a box shadow */
     border-radius: 15px;
     box-shadow: 10px 10px 5px #ccc;
+    margin-bottom: 2%;
   }
 
   .btn {
