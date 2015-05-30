@@ -2,23 +2,21 @@
 
 /**
  * @ngdoc function
- * @name personalSiteApp.controller:MainCtrl
+ * @name personalSiteApp.controller:NavCtrl
  * @description
- * # MainCtrl
+ * # NavCtrl
  * Controller of the personalSiteApp
  */
 angular.module('personalSiteApp')
-  .controller('MainCtrl', function ($scope, $location)
-  {
+  .controller('NavCtrl', function ($scope, $location) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
 
-    //Fucntion to find the active page
     $scope.isActive = function(route) {
-      print("hi");
-       return route === $location.path();
-   }
+           return route === $location.path();
+       }
+
   });

@@ -35,14 +35,14 @@
             <a class="navbar-brand" href="#/">Aaron Turner</a>
           </div>
 
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
+          <div class="collapse navbar-collapse" id="js-navbar-collapse" ng-controller="NavCtrl">
 
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/resume">Resume</a></li>
-              <li><a ng-href="#/">Android Development</a></li>
-              <li><a ng-href="#/">Web Development</a></li>
-              <li><a ng-href="#/">Contact</a></li>
+              <li ng-class="{active:isActive('/')}"><a href="#/">Home</a></li>
+              <li ng-class="{active:isActive('/resume')}"><a ng-href="#/resume">Resume</a></li>
+              <li ng-class="{active:isActive('/android')}"><a ng-href="#/">Android Development</a></li>
+              <li ng-class="{active:isActive('/web')}"><a ng-href="#/">Web Development</a></li>
+              <li ng-class="{active:isActive('/contact')}"><a ng-href="#/">Contact</a></li>
             </ul>
           </div>
         </div>
@@ -93,6 +93,7 @@
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/controllers/resume.js"></script>
+        <script src="scripts/controllers/nav.js"></script>
         <!-- endbuild -->
 </body>
 </html>

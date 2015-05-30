@@ -24,6 +24,22 @@ body {
   padding: 0;
 }
 
+h1
+{
+  text-align: center;
+  margin: 1%;
+}
+
+/* headers that also feature a download */
+.titleDownload
+{
+  text-align: center;
+  a
+  {
+    font-size: 2em;
+  }
+}
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
@@ -75,6 +91,13 @@ body {
     font-size: 21px;
     padding: 14px 24px;
   }
+}
+
+/*resume jumbotron (make it look like papery) */
+.resume
+{
+  border-bottom: 5px solid #e5e5e5;
+  box-shadow: 10px 10px 5px #ccc;
 }
 
 /* Supporting marketing content */
