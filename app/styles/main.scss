@@ -103,7 +103,9 @@ h2
 /* Main links to my dev stuff on home*/
 .devLinks
 {
-  margin: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*resume jumbotron (make it look like papery) */
@@ -123,7 +125,7 @@ h2
 }
 
 /* Two column layout */
-.androidIntro
+.Intro
 {
   text-align: center;
   font-size: 1.25em;
