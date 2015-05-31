@@ -35,6 +35,10 @@ angular
         templateUrl: 'views/android.html',
         controller: 'AndroidCtrl'
       })
+      .when('/webdev', {
+        templateUrl: 'views/webdev.html',
+        controller: 'WebdevCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
