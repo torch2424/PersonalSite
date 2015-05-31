@@ -31,6 +31,10 @@ angular
         templateUrl: 'views/resume.html',
         controller: 'ResumeCtrl'
       })
+      .when('/android', {
+        templateUrl: 'views/android.html',
+        controller: 'AndroidCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
