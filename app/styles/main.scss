@@ -10,6 +10,10 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
     src: url(/fonts/CaviarDreams.ttf);
 }
 
+html {
+   font-family: siteFont, Roboto, GillSans, Calibri;
+ }
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -18,8 +22,6 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 }
 
 body {
-
-  font-family: siteFont;
   color: #212121;
   font-size: 1.5em;
   padding: 0;
@@ -52,8 +54,8 @@ h2
 .header,
 .marketing,
 .footer {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
   color: #212121;
 }
 
