@@ -74,11 +74,55 @@ h2
 /* our navbar */
 .navbar
 {
-    font-size: 1.35em;
+    font-size: 1.5em;
     color: #212121;
 }
 
+/*Links*/
+a
+{
+    color: #42a5f5;
+}
 
+a:visited
+{
+    color: #64b5f6;
+}
+
+/*images*/
+img
+{
+    -webkit-transition: width 2s, height 2s; /* Safari */
+    transition: width 2s, height 2s;
+    transition-timing-function: ease-out;
+}
+
+.home
+{
+    img:hover
+    {
+        height: 60%;
+        width: 30%;
+    }
+}
+
+.app
+{
+    img:hover
+    {
+        height: 100%;
+        width: 75%;
+    }
+}
+
+.project
+{
+    img:hover
+    {
+        height: 75%;
+        width: 95%;
+    }
+}
 
 /* Custom page footer */
 .footer {
@@ -240,6 +284,12 @@ h2
     float:right;
     width: 50%;
     padding-left: 5%;
+  }
+
+  /* our navbar */
+  .navbar
+  {
+      font-size: 1em;
   }
 
 }
