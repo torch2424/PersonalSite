@@ -1,0 +1,10 @@
+/*The font "Caviar dreams" */
+@font-face
+{
+    font-family: siteFont;
+    src: url(/fonts/CaviarDreams.ttf);
+}
+
+html {
+   font-family: siteFont, Roboto, GillSans, Calibri;
+ }

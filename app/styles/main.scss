@@ -6,6 +6,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 //Imports
 @import "animate";
 @import "colors";
+@import "fonts";
 @import "mystyles";
 
 .browsehappy {
@@ -56,10 +57,6 @@ body {
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
-
   /* Remove the padding we set earlier */
   .header,
   .marketing,
@@ -74,21 +71,6 @@ body {
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0;
-  }
-
-  /*Add the two column layout */
-  .leftColumn
-  {
-    float: left;
-    width: 50%;
-    padding-right: 5%;
-  }
-
-  .rightColumn
-  {
-    float:right;
-    width: 50%;
-    padding-left: 5%;
   }
 
   /* our navbar */

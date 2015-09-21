@@ -1,13 +1,6 @@
-/*The font "Caviar dreams" */
-@font-face
-{
-    font-family: siteFont;
-    src: url(/fonts/CaviarDreams.ttf);
-}
-
-html {
-   font-family: siteFont, Roboto, GillSans, Calibri;
- }
+//Some content variables
+$pageWidth: 75%;
+$columnWidth: 300px;
 
  /* headers */
  h1
@@ -53,8 +46,8 @@ html {
  /*images*/
  img
  {
-     -webkit-transition: width 2s, height 2s; /* Safari */
-     transition: width 2s, height 2s;
+     -webkit-transition: width 1s, height 1s; /* Safari */
+     transition: width 1s, height 1s;
      transition-timing-function: ease-out;
  }
 
@@ -139,55 +132,11 @@ html {
    }
  }
 
- /* Two column layout */
  .Intro
  {
    text-align: center;
    font-size: 1.25em;
    margin: 0 auto;
- }
- .wrapper
- {
-   width: 100%;
-   margin: 0 auto;
- }
-
- .leftColumn
- {
-   float: none;
-   width: 100%;
-   padding-right: 0%;
-
-   img
-   {
-     display: block;
-     margin-left: auto;
-     margin-right: auto;
-   }
-
-   p
-   {
-     font-size: 1.25em;
-   }
- }
-
- .rightColumn
- {
-   float: none;
-   width: 100%;
-   padding-right: 0%;
-
-   img
-   {
-     display: block;
-     margin-left: auto;
-     margin-right: auto;
-   }
-
-   p
-   {
-     font-size: 1.25em;
-   }
  }
 
  /* Contact page paragraph */
@@ -200,3 +149,45 @@ html {
      font-size: 1.35em;
    }
  }
+
+ /* Two Columns / Responsive: Portrait tablets and up */
+ @media screen and (min-width: 768px) {
+
+    .twoColumn {
+        //Columns stuff
+        -webkit-column-count: 2; /* Chrome, Safari, Opera */
+        -moz-column-count: 2; /* Firefox */
+        column-count: 2;
+
+        -webkit-column-width: $columnWidth;
+        -moz-column-width: $columnWidth;
+        column-width: $columnWidth;
+        column-gap: 20px;
+
+        //Fix the missing content
+        ul {
+          list-style-position: inside;
+          margin: 0;
+        }
+
+        li {
+            break-inside: avoid-column;
+            display: inline-block;
+            width: 100%;
+
+            img {
+                &:hover {
+                    width: 40%;
+                    height: 60%;
+                }
+            }
+        }
+
+    }
+
+    //Container overrides
+   .container {
+       width: $pageWidth;
+       max-width: $pageWidth;
+   }
+}
