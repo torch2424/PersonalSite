@@ -1,5 +1,5 @@
 //Some content variables
-$pageWidth: 75%;
+$pageWidth: 70%;
 $columnWidth: 300px;
 
  /* headers */
@@ -43,39 +43,16 @@ $columnWidth: 300px;
      color: $visitedLinks;
  }
 
- /*images*/
- img
- {
-     -webkit-transition: width 1s, height 1s; /* Safari */
-     transition: width 1s, height 1s;
-     transition-timing-function: ease-out;
+ .appScreen {
+
+     width: 70%;
+     height: 90%;
  }
 
- .home
- {
-     img:hover
-     {
-         height: 60%;
-         width: 30%;
-     }
- }
+ .appIcon {
 
- .app
- {
-     img:hover
-     {
-         height: 100%;
-         width: 75%;
-     }
- }
-
- .project
- {
-     img:hover
-     {
-         height: 75%;
-         width: 95%;
-     }
+     width: 30%;
+     height: 50%;
  }
 
  /*git hub button*/
@@ -174,13 +151,6 @@ $columnWidth: 300px;
             break-inside: avoid-column;
             display: inline-block;
             width: 100%;
-
-            img {
-                &:hover {
-                    width: 40%;
-                    height: 60%;
-                }
-            }
         }
 
     }
