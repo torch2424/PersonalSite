@@ -3,16 +3,10 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
-/*The font "Caviar dreams" */
-@font-face
-{
-    font-family: siteFont;
-    src: url(/fonts/CaviarDreams.ttf);
-}
-
-html {
-   font-family: siteFont, Roboto, GillSans, Calibri;
- }
+//Imports
+@import "animate";
+@import "colors";
+@import "mystyles";
 
 .browsehappy {
   margin: 0.2em 0;
@@ -25,29 +19,6 @@ body {
   color: #212121;
   font-size: 1.5em;
   padding: 0;
-}
-
-/* headers */
-h1
-{
-  text-align: center;
-  margin: 2%;
-}
-
-h2
-{
-  text-align: center;
-  margin: 1%;
-}
-
-/* headers that also feature a download */
-.titleDownload
-{
-  text-align: center;
-  a
-  {
-    font-size: 2em;
-  }
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -73,58 +44,6 @@ h2
   }
 }
 
-/* our navbar */
-.navbar
-{
-    font-size: 1.5em;
-    color: #212121;
-}
-
-/*Links*/
-a
-{
-    color: #42a5f5;
-}
-
-a:visited
-{
-    color: #64b5f6;
-}
-
-/*images*/
-img
-{
-    -webkit-transition: width 2s, height 2s; /* Safari */
-    transition: width 2s, height 2s;
-    transition-timing-function: ease-out;
-}
-
-.home
-{
-    img:hover
-    {
-        height: 60%;
-        width: 30%;
-    }
-}
-
-.app
-{
-    img:hover
-    {
-        height: 100%;
-        width: 75%;
-    }
-}
-
-.project
-{
-    img:hover
-    {
-        height: 75%;
-        width: 95%;
-    }
-}
 
 /* Custom page footer */
 .footer {
@@ -133,122 +52,6 @@ img
   text-align: center;
   border-top: 1px solid #e5e5e5;
   margin-bottom: 10px;
-}
-
-/*git hub button*/
-.github-button
-{
-    padding-left: 5px;
-}
-
-.container-narrow > hr {
-  margin: 30px 0;
-}
-
-/* Main marketing message and sign up button */
-.card-panel {
-  text-align: center;
-  border-bottom: 5px solid #e5e5e5;
-  /* float our main image */
-  img
-  {
-    margin-bottom: 2%;
-  }
-
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-  }
-}
-
-.project
-{
-    padding: 5px;
-}
-
-/* Main links to my dev stuff on home*/
-.devLinks
-{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/*resume jumbotron (make it look like papery) */
-.resume
-{
-
-}
-
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-
-  p + h4 {
-    margin-top: 28px;
-  }
-}
-
-/* Two column layout */
-.Intro
-{
-  text-align: center;
-  font-size: 1.25em;
-  margin: 0 auto;
-}
-.wrapper
-{
-  width: 100%;
-  margin: 0 auto;
-}
-
-.leftColumn
-{
-  float: none;
-  width: 100%;
-  padding-right: 0%;
-
-  img
-  {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  p
-  {
-    font-size: 1.25em;
-  }
-}
-
-.rightColumn
-{
-  float: none;
-  width: 100%;
-  padding-right: 0%;
-
-  img
-  {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  p
-  {
-    font-size: 1.25em;
-  }
-}
-
-/* Contact page paragraph */
-.contact
-{
-  font-size: 1.15em;
-  padding: 15px;
-  a
-  {
-    font-size: 1.35em;
-  }
 }
 
 /* Responsive: Portrait tablets and up */
