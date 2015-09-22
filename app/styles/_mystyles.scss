@@ -86,6 +86,11 @@ $columnWidth: 300px;
      padding: 5px;
  }
 
+ //Main profile picture, center with the welcome
+ .pixelAaron {
+     margin-right: 125px;
+ }
+
  /* Main links to my dev stuff on home*/
  .devLinks
  {
@@ -131,15 +136,20 @@ $columnWidth: 300px;
  @media screen and (min-width: 768px) {
 
     .twoColumn {
-        //Columns stuff
-        -webkit-column-count: 2; /* Chrome, Safari, Opera */
-        -moz-column-count: 2; /* Firefox */
-        column-count: 2;
+        /* We first create a flex layout context */
+        display: flex;
 
-        -webkit-column-width: $columnWidth;
-        -moz-column-width: $columnWidth;
-        column-width: $columnWidth;
-        column-gap: 20px;
+        /* Then we define the flow direction and if we allow the items to wrap
+         * Remember this is the same as:
+         * flex-direction: row;
+         * flex-wrap: wrap;
+         */
+        flex-flow: row wrap;
+
+        /* Then we define how is distributed the remaining space */
+        justify-content: space-around;
+
+        align-items: baseline;
 
         //Fix the missing content
         ul {
@@ -150,7 +160,7 @@ $columnWidth: 300px;
         li {
             break-inside: avoid-column;
             display: inline-block;
-            width: 100%;
+            width: 30%;
         }
 
     }
