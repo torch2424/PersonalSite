@@ -1,6 +1,7 @@
 //Some content variables
-$pageWidth: 70%;
-$columnWidth: 300px;
+$pageWidth: 95%;
+$appWidth: 400px;
+$webWidth: 800px;
 
  /* headers */
  h1
@@ -81,22 +82,17 @@ $columnWidth: 300px;
    }
  }
 
- .project
- {
-     padding: 5px;
- }
-
  //Main profile picture, center with the welcome
  .pixelAaron {
-     margin-right: 125px;
+     margin-right: 50px;
  }
 
- /* Main links to my dev stuff on home*/
- .devLinks
- {
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
+ .home {
+
+     p {
+         text-align: center;
+         font-size: 20px;
+     }
  }
 
  /*resume jumbotron (make it look like papery) */
@@ -105,21 +101,47 @@ $columnWidth: 300px;
      text-align: left;
  }
 
- /* Supporting marketing content */
- .marketing {
-   margin: 40px 0;
-
-   p + h4 {
-     margin-top: 28px;
-   }
- }
-
  .Intro
  {
    text-align: center;
    font-size: 1.25em;
    margin: 0 auto;
  }
+
+//Projects
+//Our Flexboxes for projects
+.columns {
+    display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   width: 100%;
+   justify-content: space-between;
+
+    .app {
+        max-width: $appWidth;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        p {
+            text-align: left;
+            font-size: 18px;
+        }
+    }
+
+    .web {
+        @extend .app;
+
+        max-width: $webWidth;
+    }
+}
+
+//Project styles
+.webScreen {
+    width: 95%;
+    height: auto;
+}
+
 
  /* Contact page paragraph */
  .contact
@@ -132,38 +154,16 @@ $columnWidth: 300px;
    }
  }
 
+ /* Main links to my dev stuff on home*/
+ .devLinks
+ {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+ }
+
  /* Two Columns / Responsive: Portrait tablets and up */
  @media screen and (min-width: 768px) {
-
-    .twoColumn {
-        /* We first create a flex layout context */
-        display: flex;
-
-        /* Then we define the flow direction and if we allow the items to wrap
-         * Remember this is the same as:
-         * flex-direction: row;
-         * flex-wrap: wrap;
-         */
-        flex-flow: row wrap;
-
-        /* Then we define how is distributed the remaining space */
-        justify-content: space-around;
-
-        align-items: baseline;
-
-        //Fix the missing content
-        ul {
-          list-style-position: inside;
-          margin: 0;
-        }
-
-        li {
-            break-inside: avoid-column;
-            display: inline-block;
-            width: 30%;
-        }
-
-    }
 
     //Container overrides
    .container {
