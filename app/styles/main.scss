@@ -17,7 +17,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 }
 
 body {
-  color: #212121;
+  color: $stockDark;
   font-size: 1.5em;
   padding: 0;
 }
@@ -28,13 +28,13 @@ body {
 .footer {
   padding-left: 25px;
   padding-right: 25px;
-  color: #212121;
+  color: $stockDark;
 }
 
 /* Custom page header */
 .header {
   margin-bottom: 10px;
-  color: #212121;
+  color: $stockDark;
 
   /* Make the masthead heading the same height as the navigation */
   h3 {
@@ -51,7 +51,7 @@ body {
   padding-top: 5px;
   color: #777;
   text-align: center;
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid $stockBorders;
   margin-bottom: 10px;
 }
 
