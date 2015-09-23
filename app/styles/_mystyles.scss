@@ -99,6 +99,25 @@ body {
      color: $visitedLinks;
  }
 
+ //Fancy Image stuff
+ img {
+
+     //Transition speed
+     $transitionSpeed: .25s;
+
+     opacity: 1;
+
+     -webkit-transition: opacity $transitionSpeed ease-in-out;
+    -moz-transition: opacity $transitionSpeed ease-in-out;
+    -o-transition: opacity $transitionSpeed ease-in-out;
+    transition: opacity $transitionSpeed ease-in-out;
+
+     &:hover {
+         opacity: .65;
+     }
+
+ }
+
  .appScreen {
 
      width: 70%;
