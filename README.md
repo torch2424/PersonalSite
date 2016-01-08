@@ -1,7 +1,7 @@
 # PersonalSite
 A website to showcase my work and portfolio
 
-![Page Image](http://aaronthedev.com/images/personal.5d2b7558.png)
+![Page Image](https://aaronthedev.com/images/personal.5d2b7558.png)
 
 
 >  This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
