@@ -18,14 +18,35 @@ class="header">
       </div>
 
       <div ng-class = "{collapse: collapseNav && isMobile()}"
-      class="navbar-collapse" id="js-navbar-collapse">
+      class="navbar-collapse animated fadeIn"
+      id="js-navbar-collapse">
 
         <ul class="nav navbar-nav">
-          <li ng-class="{active:isActive('/')}"><a href="#/">Home</a></li>
-          <li ng-class="{active:isActive('/resume')}"><a ng-href="#/resume">Resume</a></li>
-          <li ng-class="{active:isActive('/android')}"><a ng-href="#/android">App Dev</a></li>
-          <li ng-class="{active:isActive('/webdev')}"><a ng-href="#/webdev">Web Dev</a></li>
-          <li ng-class="{active:isActive('/contact')}"><a ng-href="#/contact">Contact</a></li>
+
+          <li ng-class="{active:isActive('/')}">
+              <a href="#/"
+              ng-click = "collapseNav = true">Home</a>
+          </li>
+
+          <li ng-class="{active:isActive('/resume')}">
+              <a href="#/resume"
+              ng-click = "collapseNav = true">Resume</a>
+          </li>
+
+          <li ng-class="{active:isActive('/android')}">
+              <a href="#/android"
+              ng-click = "collapseNav = true">App Dev</a>
+          </li>
+
+          <li ng-class="{active:isActive('/webdev')}">
+              <a href="#/webdev"
+              ng-click = "collapseNav = true">Web Dev</a>
+          </li>
+
+          <li ng-class="{active:isActive('/contact')}">
+              <a href="#/contact"
+              ng-click = "collapseNav = true">Contact</a>
+          </li>
         </ul>
       </div>
     </div>
