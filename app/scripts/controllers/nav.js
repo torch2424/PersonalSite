@@ -15,6 +15,17 @@ angular.module('personalSiteApp')
       'Karma'
     ];
 
+    //Initialize if we are mobile or dektop
+    //and if our navbar is collapsed
+    $scope.collapseNav = true;
+    $scope.isMobile = function() {
+
+        //Check to see if the css rule for the collapsible applies
+        var mq = window.matchMedia('(max-width: 767px)');
+
+        return mq.matches;
+    }
+
     $scope.isActive = function(route) {
            return route === $location.path();
        }

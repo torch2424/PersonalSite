@@ -20,67 +20,16 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <!-- Add your site or application content here -->
-    <div class="header">
-      <div class="navbar navbar-default  z-depth-1" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-
-            <a class="navbar-brand" href="#/">Aaron Turner</a>
-          </div>
-
-          <div class="collapse navbar-collapse" id="js-navbar-collapse" ng-controller="NavCtrl">
-
-            <ul class="nav navbar-nav">
-              <li ng-class="{active:isActive('/')}"><a href="#/">Home</a></li>
-              <li ng-class="{active:isActive('/resume')}"><a ng-href="#/resume">Resume</a></li>
-              <li ng-class="{active:isActive('/android')}"><a ng-href="#/android">App Dev</a></li>
-              <li ng-class="{active:isActive('/webdev')}"><a ng-href="#/webdev">Web Dev</a></li>
-              <li ng-class="{active:isActive('/contact')}"><a ng-href="#/contact">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+    <!-- Include the navbar -->
+    <div ng-include="'/views/templates/navbar.html'">
     </div>
 
     <div class="container">
     <div ng-view=""></div>
     </div>
 
-    <div class="footer animated fadeIn">
-        <!-- Place dev stuff here -->
-        <div class="devLinks">
-
-        <!--Google Play Badge For Aaron Turner -->
-
-        <a href="https://play.google.com/store/apps/dev?id=7725420572806800529&hl=en">
-        <img alt="Get it on Google Play"
-             src="https://developer.android.com/images/brand/en_generic_rgb_wo_60.png" />
-        </a>
-
-          <!-- Available on chrome Stor Badge -->
-          <a href="https://chrome.google.com/webstore/detail/crunchkey/dcdjcligfkkgogbgafjeicfmpjgcinfa">
-        <img alt="Get it on Chrome Web Store"
-             src="https://developer.chrome.com/webstore/images/ChromeWebStore_Badge_v2_206x58.png" />
-        </a>
-
-        <!-- Github follow badge, that links to my page -->
-        <!-- Place this tag where you want the button to render. -->
-        <a class="github-button" href="https://github.com/torch2424" data-style="mega"
-        aria-label="Follow @torch2424 on GitHub">Follow @torch2424</a>
-        <!-- Place this tag right after the last button or just before your close body tag. -->
-        <script async defer id="github-bjs"
-        src="https://buttons.github.io/buttons.js"></script>
-        </div>
-        <br>
-
+    <!-- Include the footer -->
+    <div ng-include="'/views/templates/footer.html'">
     </div>
 
 

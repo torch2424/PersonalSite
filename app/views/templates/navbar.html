@@ -1,0 +1,33 @@
+
+<div ng-controller="NavCtrl"
+class="header">
+  <div class="navbar navbar-default  z-depth-1" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+
+        <button type="button"
+        ng-click = "collapseNav = !collapseNav"
+        class="navbar-toggle collapsed">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="navbar-brand" href="#/">Aaron Turner</a>
+      </div>
+
+      <div ng-class = "{collapse: collapseNav && isMobile()}"
+      class="navbar-collapse" id="js-navbar-collapse">
+
+        <ul class="nav navbar-nav">
+          <li ng-class="{active:isActive('/')}"><a href="#/">Home</a></li>
+          <li ng-class="{active:isActive('/resume')}"><a ng-href="#/resume">Resume</a></li>
+          <li ng-class="{active:isActive('/android')}"><a ng-href="#/android">App Dev</a></li>
+          <li ng-class="{active:isActive('/webdev')}"><a ng-href="#/webdev">Web Dev</a></li>
+          <li ng-class="{active:isActive('/contact')}"><a ng-href="#/contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
