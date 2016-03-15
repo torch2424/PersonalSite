@@ -28,14 +28,24 @@ class="header">
               ng-click = "collapseNav = true">Home</a>
           </li>
 
+          <li ng-class="{active:isActive('/webdev')}">
+              <a href="#/webdev"
+              ng-click = "collapseNav = true">Web Dev</a>
+          </li>
+
           <li ng-class="{active:isActive('/android')}">
               <a href="#/android"
               ng-click = "collapseNav = true">App Dev</a>
           </li>
 
-          <li ng-class="{active:isActive('/webdev')}">
-              <a href="#/webdev"
-              ng-click = "collapseNav = true">Web Dev</a>
+          <li ng-class="{active:isActive('/gamedev')}">
+              <a href="#/gamedev"
+              ng-click = "collapseNav = true">Game Dev</a>
+          </li>
+
+          <li ng-class="{active:isActive('/bio')}">
+              <a href="#/bio"
+              ng-click = "collapseNav = true">Bio</a>
           </li>
 
           <li ng-class="{active:isActive('/contact')}">

@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name personalSiteApp.controller:AboutCtrl
+ * @name personalSiteApp.controller:GamedevCtrl
  * @description
- * # AboutCtrl
+ * # GamedevCtrl
  * Controller of the personalSiteApp
  */
 angular.module('personalSiteApp')
-  .controller('AboutCtrl', function () {
+  .controller('GamedevCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

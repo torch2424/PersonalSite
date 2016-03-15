@@ -18,7 +18,6 @@ angular.module('personalSiteApp')
 
     //Fucntion to find the active page
     $scope.isActive = function(route) {
-      print("hi");
        return route === $location.path();
    }
   });

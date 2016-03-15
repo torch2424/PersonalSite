@@ -112,10 +112,14 @@ body {
     -o-transition: opacity $transitionSpeed ease-in-out;
     transition: opacity $transitionSpeed ease-in-out;
 
-     &:hover {
-         opacity: .65;
-     }
+ }
 
+ a {
+     img {
+         &:hover {
+              opacity: .75;
+          }
+     }
  }
 
  .appScreen {
@@ -210,6 +214,21 @@ body {
 .webScreen {
     width: 95%;
     height: auto;
+}
+
+//List styles
+.aboutList {
+
+    text-align: left;
+    margin-left: 35px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    li {
+        list-style-type: initial;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 }
 
 

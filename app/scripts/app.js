@@ -23,10 +23,6 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
-      })
       .when('/android', {
         templateUrl: 'views/android.html',
         controller: 'AndroidCtrl'
@@ -34,6 +30,15 @@ angular
       .when('/webdev', {
         templateUrl: 'views/webdev.html',
         controller: 'WebdevCtrl'
+      })
+      .when('/gamedev', {
+        templateUrl: 'views/gamedev.html',
+        controller: 'GamedevCtrl',
+        controllerAs: 'Gamedev'
+      })
+      .when('/bio', {
+        templateUrl: 'views/about.html',
+        controller: 'AboutCtrl'
       })
       .when('/contact', {
         templateUrl: 'views/contact.html',
