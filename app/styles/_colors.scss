@@ -1,12 +1,15 @@
-//Colors, Whimsicott
-//
+//Colors, Various Pokemon
 
 $bgColor: #e6decd;
-$navBG: #c5b48b;
-$activeTabBG: $bgColor;
+$navBG: #eaeaea;
+$standard: #292931;
+$links: #4a9cee;
+$visitedLinks: #4a7bb4;
+
+//Dependent Colors
+$activeTabBG: #f6f6f6;
 $cardBG: $navBG;
-$standard: #523929;
-$links: #417b41;
-$visitedLinks: #184a18;
+
+//Yeoman Colors
 $stockBorders: #e5e5e5;
-$stockDark: #212121;
+$stockDark: $standard;

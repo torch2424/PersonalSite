@@ -28,16 +28,16 @@ body {
 
 .navbar-default .navbar-nav > .active > a {
 
-    background-color: $bgColor;
+    background-color: $activeTabBG;
     color: $standard;
 
     &:hover {
-        background-color: $bgColor;
+        background-color: $activeTabBG;
         color: $standard;
     }
 
     &:focus {
-        background-color: $bgColor;
+        background-color: $activeTabBG;
         color: $standard;
     }
 }
@@ -83,7 +83,7 @@ body {
  .navbar
  {
      font-size: 1.5em;
-     color: $stockDark;
+     color: $standard;
  }
 
  /*Links*/
@@ -172,7 +172,7 @@ body {
  .resume
  {
      text-align: left;
-     color: $stockDark;
+     color: $standard;
  }
 
  .Intro
