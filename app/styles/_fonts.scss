@@ -1,10 +1,38 @@
-/*The font "Caviar dreams" */
-@font-face
-{
-    font-family: siteFont;
-    src: url(/fonts/CaviarDreams.ttf);
+//Simply adjust our font size here
+
+$baseFont: 12;
+
+h6 {
+    font-size:  unquote(($baseFont) + 'px')
 }
 
-html {
-   font-family: siteFont, Roboto, GillSans, Calibri;
- }
+h5 {
+    font-size:  unquote(($baseFont * 1.24) + 'px')
+}
+
+h4 {
+    font-size:  unquote(($baseFont * 1.485) + 'px')
+}
+
+h3 {
+    font-size:  unquote(($baseFont * 1.746) + 'px')
+}
+
+h2 {
+    font-size:  unquote(($baseFont * 2.239) + 'px')
+}
+
+h1 {
+    font-size:  unquote(($baseFont * 2.985) + 'px')
+}
+
+
+//Some default font sizes
+body, p {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+a {
+    font-size: 18px;
+}
