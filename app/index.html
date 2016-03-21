@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Aaron Turner</title>
-    <meta name="description" content="">
+    <meta name="description" content="Homepage and Portfolio for Aaron Turner">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
@@ -14,6 +14,25 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+
+    <!--Microdata for SEO -->
+    <!-- fragment: microdata -->
+
+        <script type="application/ld+json">
+        {
+          "@context" : "http://schema.org",
+          "@type" : "Person",
+          "name" : "Aaron Turner",
+          "sameAs" : [
+            "https://twitter.com/nosInfinite",
+            "https://github.com/torch2424"
+          ]
+        }
+        </script>
+
+        <!-- /fragment: microdata -->
+
+
   </head>
   <body ng-app="personalSiteApp">
     <!--[if lt IE 7]>
@@ -40,7 +59,7 @@
        r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
        }(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-       ga('create', 'UA-XXXXX-X');
+       ga('create', 'UA-75362326-1');
        ga('send', 'pageview');
     </script>
 
