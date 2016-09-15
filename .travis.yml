@@ -1,9 +1,16 @@
+# No sudo
 sudo: false
+# install node on the newest version of 4
 language: node_js
 node_js:
-  - 'iojs'
-  - '0.12'
-  - '0.10'
+    - '4'
+ # Npm install bower and grunt, then bower install and npm install
 before_script:
-  - 'npm install -g bower grunt-cli'
-  - 'bower install'
+    - 'npm install -g bower grunt-cli'
+    - 'bower install'
+    - 'npm install'
+# Simply build the project for testing for now
+script:
+    - 'grunt'
+
+# Deploymentt will go here, going to use: https://neemzy.org/articles/deploy-to-your-own-server-through-ssh-with-travis-ci
