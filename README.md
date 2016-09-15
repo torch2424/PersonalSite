@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/torch2424/PersonalSite.svg?branch=installTravis)](https://travis-ci.org/torch2424/PersonalSite)
+
 # PersonalSite
 A website to showcase my work and portfolio
 
