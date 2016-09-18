@@ -9,8 +9,9 @@ before_script:
     - 'gem install sass --version "=3.4.22"'
     - 'gem install compass --version "=1.0.3"'
     - 'npm install -g bower grunt-cli'
-    - 'bower install'
     - 'npm install'
+    - 'bower install'
+
 # Simply build the project for testing for now
 script:
     - 'grunt'
@@ -32,4 +33,4 @@ after_success:
     - mv * build
     - tar -czf package.tgz build
     - export SSHPASS=$DEPLOY_PASS
-    - - if [ "$TRAVIS_BRANCH" == "master" ]; then echo "Deploying the project since we are on master branch..."; - sshpass -e scp package.tgz $DEPLOY_USER@$DEPLOY_HOST:/home/$DEPLOY_USER; cat deploy.sh | sshpass -e ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_HOST "cat > /tmp/deploy.sh ; chmod 755 /tmp/deploy.sh ; /tmp/deploy.sh"; fi
+    - - if [ "$TRAVIS_BRANCH" == "installTravis" ]; then echo "Deploying the project since we are on master branch..."; sshpass -e scp -o StrictHostKeyChecking=no package.tgz $DEPLOY_USER@$DEPLOY_HOST:/home/$DEPLOY_USER; cat deploy.sh | sshpass -e ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_HOST "cat > /tmp/deploy.sh ; chmod 755 /tmp/deploy.sh ; /tmp/deploy.sh"; fi
