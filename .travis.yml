@@ -6,8 +6,8 @@ node_js:
     - '4'
  # Npm install bower and grunt, then bower install and npm install
 before_script:
-    - 'gem install sass --version "=3.2.12"'
-    - 'gem install compass --version "=0.12.2"'
+    - 'gem install sass --version "=3.4.22"'
+    - 'gem install compass --version "=1.0.3"'
     - 'npm install -g bower grunt-cli'
     - 'bower install'
     - 'npm install'
@@ -16,3 +16,20 @@ script:
     - 'grunt'
 
 # Deploymentt will go here, going to use: https://neemzy.org/articles/deploy-to-your-own-server-through-ssh-with-travis-ci
+addons:
+  apt:
+    packages:
+    - sshpass
+after_success:
+    - export SSHPASS=$DEPLOY_PASS
+    - echo "Branch we are currently testing from:"
+    - echo $TRAVIS_BRANCH
+    - echo "Current Directory and it's contents:"
+    - pwd
+    - ls
+    - echo "Packaging built project"
+    - mkdir build
+    - mv * build
+    - tar -czf package.tgz build
+    - export SSHPASS=$DEPLOY_PASS
+    - - if [ "$TRAVIS_BRANCH" == "master" ]; then echo "Deploying the project since we are on master branch..."; - sshpass -e scp package.tgz $DEPLOY_USER@$DEPLOY_HOST:$DEPLOY_PATH; cat deploy.sh | sshpass -e ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_HOST "cat > /tmp/deploy.sh ; chmod 755 /tmp/deploy.sh ; /tmp/deploy.sh"; fi
