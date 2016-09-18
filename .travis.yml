@@ -1,3 +1,6 @@
+# Needed Travis Variables
+# DEPLOY_USER, DEPLOY_PASS, DEPLOY_HOST
+
 # No sudo
 sudo: false
 # install node on the newest version of 4
