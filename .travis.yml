@@ -34,9 +34,11 @@ after_success:
         pwd;
         ls;
         echo "Packaging built project";
+        shopt -s extglob
         mkdir build;
-        mv * build;
+        cp */!(build) build;
         tar -czf package.tgz build;
+        shopt -u extglob
         echo "Current Directory and it's contents:";
         pwd;
         ls;
