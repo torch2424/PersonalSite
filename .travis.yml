@@ -1,9 +1,56 @@
+# Needed Travis Variables
+# DEPLOY_USER, DEPLOY_PASS, DEPLOY_HOST
+
+# No sudo
 sudo: false
+# install node on the newest version of 4
 language: node_js
 node_js:
-  - 'iojs'
-  - '0.12'
-  - '0.10'
+    - '4'
+ # Npm install bower and grunt, then bower install and npm install
 before_script:
-  - 'npm install -g bower grunt-cli'
-  - 'bower install'
+    - 'gem install sass --version "=3.4.22"'
+    - 'gem install compass --version "=1.0.3"'
+    - 'npm install -g bower grunt-cli'
+    - 'npm install'
+    - 'bower install'
+
+# Simply build the project for testing for now
+script:
+    - 'grunt'
+
+# Only Run Builds and Pull Requests on Master
+branches:
+  only:
+    - master
+
+# Deploymentt will go here, going to use: https://neemzy.org/articles/deploy-to-your-own-server-through-ssh-with-travis-ci
+addons:
+  apt:
+    packages:
+    - sshpass
+after_success:
+    - if [ "$TRAVIS_BRANCH" == "master" ]; then
+        echo "Deploying the project since we are on master branch...";
+        export SSHPASS=$DEPLOY_PASS;
+        echo "Branch we are currently testing from:";
+        echo $TRAVIS_BRANCH;
+        echo "Current Directory and it's contents:";
+        pwd;
+        ls;
+        echo "Packaging built project";
+        mkdir projectBuild;
+        cp -R dist projectBuild;
+        cp -R app/views projectBuild/dist;
+        cp -R app/images/* projectBuild/dist/images;
+        echo "Listing Final Directory and it's contents before taring:";
+        pwd;
+        ls;
+        echo "Tarring project and deploying over SSH!";
+        tar -czf package.tgz projectBuild;
+        sshpass -e scp -o StrictHostKeyChecking=no package.tgz $DEPLOY_USER@$DEPLOY_HOST:/home/$DEPLOY_USER;
+        cat deploy.sh | sshpass -e ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_HOST "cat > /tmp/deploy.sh;
+        chmod 755 /tmp/deploy.sh;
+        /tmp/deploy.sh";
+        fi
+    - echo "Finished build, and any needed deployment!"
