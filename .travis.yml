@@ -25,7 +25,8 @@ addons:
     packages:
     - sshpass
 after_success:
-    - if [ "$TRAVIS_BRANCH" == "installTravis" ]; then echo "Deploying the project since we are on master branch...";
+    - if [ "$TRAVIS_BRANCH" == "installTravis" ]; then
+        echo "Deploying the project since we are on master branch...";
         export SSHPASS=$DEPLOY_PASS;
         echo "Branch we are currently testing from:";
         echo $TRAVIS_BRANCH;
@@ -43,4 +44,5 @@ after_success:
         cat deploy.sh | sshpass -e ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_HOST "cat > /tmp/deploy.sh;
         chmod 755 /tmp/deploy.sh;
         /tmp/deploy.sh";
-    fi
+        fi
+    - echo "Finished build, and any needed deployment!"
