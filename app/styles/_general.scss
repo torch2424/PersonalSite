@@ -1,52 +1,23 @@
-//Some content variables
-$pageWidth: 95%;
-$appWidth: 800px;
-$webWidth: 800px;
-
 //Main colors
 body {
     background-color: $bgColor;
     color: $standard;
 }
 
-.navbar {
-    background-color: $navBG;
-    border: none;
+//To replace those nasty <br> tags
+.spaceDivider {
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
-.navbar-default .navbar-nav > li > a {
-    color: $standard;
+.spaceDividerSmall {
+    margin-top: 2px;
+    margin-bottom: 2px;
 }
 
-.navbar-default .navbar-brand {
-    color: $standard;
-}
-
-.navbar-default .navbar-toggle {
-    border: none;
-}
-
-.navbar-default .navbar-nav > .active > a {
-
-    background-color: $activeTabBG;
-    color: $standard;
-
-    &:hover {
-        background-color: $activeTabBG;
-        color: $standard;
-    }
-
-    &:focus {
-        background-color: $activeTabBG;
-        color: $standard;
-    }
-}
-
-.card-panel {
-    background-color: $cardBG;
-    color: $standard;
-    border-bottom: none !important;
-    border-radius: 5px;
+.spaceDividerLarge {
+    margin-top: 7px;
+    margin-bottom: 7px;
 }
 
  /* headers */
@@ -72,15 +43,6 @@ body {
  .titleDownload
  {
    text-align: center;
-   a
-   {
-   }
- }
-
- /* our navbar */
- .navbar
- {
-     color: $standard;
  }
 
  /*Links*/
@@ -117,36 +79,8 @@ body {
      }
  }
 
- .appScreen {
-
-     width: 30%;
-     height: auto;
- }
-
- .appIcon {
-
-     width: 15%;
-     height: auto;
- }
-
  .container-narrow > hr {
    margin: 30px 0;
- }
-
- /* Main marketing message and sign up button */
- .card-panel {
-   text-align: center;
-   border-bottom: 5px solid $stockBorders;
-   /* float our main image */
-   img
-   {
-     margin-bottom: 2%;
-     border-radius: 3px;
-   }
-
-   .btn {
-     padding: 14px 24px;
-   }
  }
 
  //Main profile picture, center with the welcome
@@ -204,12 +138,6 @@ body {
         margin-top: 20px;
         margin-bottom: 20px;
     }
-}
-
-//Project styles
-.webScreen {
-    width: 95%;
-    height: auto;
 }
 
 //List styles
