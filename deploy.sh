@@ -7,14 +7,15 @@ echo "Deploying aaronthedev.com..."
 cd ~
 echo "Printing directory and listing contents: "
 pwd
-ls
+find . -type d | cat
 echo "Untaring package"
 rm -rf package
 mkdir package
 tar -xzf package.tgz -C package
 rm package.tgz
 echo "Printing final directory contents: "
-ls
+pwd
+find . -type d | cat
 
 # Copy any file we want to keep from build to build
 # Such as keys, etc...
@@ -24,8 +25,8 @@ ls
 echo "Backing up (/var/www/dist-old) and deploying!"
 rm -rf /var/www/aaronthedev.com/dist-old
 mkdir /var/www/aaronthedev.com/dist-old
-mv /var/www/aaronthedev.com/dist /var/www/aaronthedev.com/dist-old
+mv /var/www/aaronthedev.com/dist/* /var/www/aaronthedev.com/dist-old
 rm -rf /var/www/aaronthedev.com/dist
 mkdir /var/www/aaronthedev.com/dist
-mv package/projectBuild /var/www/aaronthedev.com/dist
+mv package/projectBuild/* /var/www/aaronthedev.com/dist
 echo "Finished Deploying, goodbye!"
