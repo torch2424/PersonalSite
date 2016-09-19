@@ -20,6 +20,25 @@ body {
     margin-bottom: 7px;
 }
 
+.githubActivityDirective {
+    float: none !important;
+    width: 90% !important;
+    max-width: 300px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+
+    .github-activity-header {
+        float: none;
+        height: 150px;
+    }
+
+    .github-activity-row {
+        float: none;
+        height: 125px;
+    }
+}
+
  /* headers */
  h1
  {
@@ -115,13 +134,13 @@ body {
    flex-direction: row;
    flex-wrap: wrap;
    width: 100%;
-   justify-content: space-between;
+   justify-content: center;
 
     .app {
         max-width: $appWidth;
 
-        margin-left: auto;
-        margin-right: auto;
+        margin-left: 25px;
+        margin-right: 25px;
 
         p {
             text-align: left;
@@ -196,4 +215,18 @@ body {
        width: $pageWidth;
        max-width: $pageWidth;
    }
+}
+
+//Mobile Devies, make cards wider
+@media screen and (max-width: 768px) {
+
+    .columns {
+
+        .app {
+            max-width: $appWidth;
+
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+    }
 }
