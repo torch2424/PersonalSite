@@ -25,6 +25,7 @@ find . -type d | cat
 echo "Backing up (/var/www/dist-old) and deploying!"
 rm -rf /var/www/aaronthedev.com/dist-old
 mkdir /var/www/aaronthedev.com/dist-old
+# Need to use /folder/* to move a folders contents, and not the whole folder
 mv /var/www/aaronthedev.com/dist/* /var/www/aaronthedev.com/dist-old
 rm -rf /var/www/aaronthedev.com/dist
 mkdir /var/www/aaronthedev.com/dist

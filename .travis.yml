@@ -36,6 +36,7 @@ after_success:
         echo "Packaging built project";
         mkdir projectBuild;
         cp -R dist projectBuild;
+        cp -R app projectBuild;
         echo "Listing Final Directory and it's contents before taring:";
         pwd;
         find . -type d | cat;
