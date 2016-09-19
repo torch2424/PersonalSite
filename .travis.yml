@@ -32,14 +32,14 @@ after_success:
         echo $TRAVIS_BRANCH;
         echo "Current Directory and it's contents:";
         pwd;
-        find . -type d | cat;
+        ls;
         echo "Packaging built project";
         mkdir projectBuild;
         cp -R dist projectBuild;
-        cp -R app projectBuild;
+        cp -R app projectBuild/dist;
         echo "Listing Final Directory and it's contents before taring:";
         pwd;
-        find . -type d | cat;
+        ls;
         echo "Tarring project and deploying over SSH!";
         tar -czf package.tgz projectBuild;
         sshpass -e scp -o StrictHostKeyChecking=no package.tgz $DEPLOY_USER@$DEPLOY_HOST:/home/$DEPLOY_USER;

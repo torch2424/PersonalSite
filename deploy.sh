@@ -13,9 +13,12 @@ rm -rf package
 mkdir package
 tar -xzf package.tgz -C package
 rm package.tgz
-echo "Printing final directory contents: "
+echo "Printing final directory contents, as well as package-projectBuild-dist contents: "
 pwd
-find . -type d | cat
+ls
+ls package
+ls package/projectBuild
+las package/projectBuild/dist
 
 # Copy any file we want to keep from build to build
 # Such as keys, etc...
@@ -29,5 +32,5 @@ mkdir /var/www/aaronthedev.com/dist-old
 mv /var/www/aaronthedev.com/dist/* /var/www/aaronthedev.com/dist-old
 rm -rf /var/www/aaronthedev.com/dist
 mkdir /var/www/aaronthedev.com/dist
-mv package/projectBuild/* /var/www/aaronthedev.com/dist
+mv package/projectBuild/dist/* /var/www/aaronthedev.com/dist
 echo "Finished Deploying, goodbye!"
