@@ -19,13 +19,18 @@ before_script:
 script:
     - 'grunt'
 
+# Only Run Builds and Pull Requests on Master
+branches:
+  only:
+    - master
+
 # Deploymentt will go here, going to use: https://neemzy.org/articles/deploy-to-your-own-server-through-ssh-with-travis-ci
 addons:
   apt:
     packages:
     - sshpass
 after_success:
-    - if [ "$TRAVIS_BRANCH" == "installTravis" ]; then
+    - if [ "$TRAVIS_BRANCH" == "master" ]; then
         echo "Deploying the project since we are on master branch...";
         export SSHPASS=$DEPLOY_PASS;
         echo "Branch we are currently testing from:";
