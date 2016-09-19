@@ -35,7 +35,7 @@ after_success:
         ls;
         echo "Packaging built project";
         mkdir projectBuild;
-        cp */!(projectBuild) projectBuild;
+        cp -R dist projectBuild;
         tar -czf package.tgz projectBuild;
         echo "Current Directory and it's contents:";
         pwd;
