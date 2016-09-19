@@ -47,6 +47,7 @@ body {
     color: $standard;
     border-bottom: none !important;
     border-radius: 5px;
+    height: initial !important;
 }
 
  /* headers */
@@ -137,6 +138,7 @@ body {
  .card-panel {
    text-align: center;
    border-bottom: 5px solid $stockBorders;
+   height: initial !important;
    /* float our main image */
    img
    {

@@ -18,7 +18,7 @@ pwd
 ls
 ls package
 ls package/projectBuild
-las package/projectBuild/dist
+ls package/projectBuild/dist
 
 # Copy any file we want to keep from build to build
 # Such as keys, etc...
