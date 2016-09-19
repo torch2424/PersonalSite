@@ -25,15 +25,22 @@ addons:
     packages:
     - sshpass
 after_success:
-    - export SSHPASS=$DEPLOY_PASS
-    - echo "Branch we are currently testing from:"
-    - echo $TRAVIS_BRANCH
-    - echo "Current Directory and it's contents:"
-    - pwd
-    - ls
-    - echo "Packaging built project"
-    - mkdir build
-    - mv * build
-    - tar -czf package.tgz build
-    - export SSHPASS=$DEPLOY_PASS
-    - - if [ "$TRAVIS_BRANCH" == "installTravis" ]; then echo "Deploying the project since we are on master branch..."; sshpass -e scp -o StrictHostKeyChecking=no package.tgz $DEPLOY_USER@$DEPLOY_HOST:/home/$DEPLOY_USER; cat deploy.sh | sshpass -e ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_HOST "cat > /tmp/deploy.sh ; chmod 755 /tmp/deploy.sh ; /tmp/deploy.sh"; fi
+    - if [ "$TRAVIS_BRANCH" == "installTravis" ]; then echo "Deploying the project since we are on master branch...";
+        export SSHPASS=$DEPLOY_PASS;
+        echo "Branch we are currently testing from:";
+        echo $TRAVIS_BRANCH;
+        echo "Current Directory and it's contents:";
+        pwd;
+        ls;
+        echo "Packaging built project";
+        mkdir build;
+        mv * build;
+        tar -czf package.tgz build;
+        echo "Current Directory and it's contents:";
+        pwd;
+        ls;
+        sshpass -e scp -o StrictHostKeyChecking=no package.tgz $DEPLOY_USER@$DEPLOY_HOST:/home/$DEPLOY_USER;
+        cat deploy.sh | sshpass -e ssh -o StrictHostKeyChecking=no $DEPLOY_USER@$DEPLOY_HOST "cat > /tmp/deploy.sh;
+        chmod 755 /tmp/deploy.sh;
+        /tmp/deploy.sh";
+    fi
