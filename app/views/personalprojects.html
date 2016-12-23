@@ -1,0 +1,24 @@
+<!-- animation div -->
+<div class="animated fadeIn">
+  <!-- Going to do a 1 coulmn layout -->
+  <h1>Personal Projects</h1>
+
+  <!--paragraph explaining my web development-->
+  <div class="Intro">
+    <p>
+      These are a collections of some of my personal favorite projects that I have created/contributed to in my free time. I also have a lot more projects that are open-sourced on my <a href="https://github.com/torch2424" target="_blank">Github</a>.
+    </p>
+  </div>
+
+  <ul class="columns">
+
+    <!-- Include our projects -->
+    <div ng-include="'views/templates/projects/flyxer.html'"></div>
+    <div ng-include="'views/templates/projects/chipGo.html'"></div>
+    <div ng-include="'views/templates/projects/statsMonitor.html'"></div>
+    <div ng-include="'views/templates/projects/superPunch.html'"></div>
+    <div ng-include="'views/templates/projects/linkDrops.html'"></div>
+    <div ng-include="'views/templates/projects/personalSite.html'"></div>
+    <div ng-include="'views/templates/projects/manyMore.html'"></div>
+  </ul>
+</div>

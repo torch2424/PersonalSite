@@ -1,0 +1,33 @@
+.navbar {
+    background-color: $navBG;
+    color: $standard;
+    border: none;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: $standard;
+}
+
+.navbar-default .navbar-brand {
+    color: $standard;
+}
+
+.navbar-default .navbar-toggle {
+    border: none;
+}
+
+.navbar-default .navbar-nav > .active > a {
+
+    background-color: $activeTabBG;
+    color: $standard;
+
+    &:hover {
+        background-color: $activeTabBG;
+        color: $standard;
+    }
+
+    &:focus {
+        background-color: $activeTabBG;
+        color: $standard;
+    }
+}

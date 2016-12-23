@@ -1,0 +1,232 @@
+//Main colors
+body {
+    background-color: $bgColor;
+    color: $standard;
+}
+
+//To replace those nasty <br> tags
+.spaceDivider {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.spaceDividerSmall {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.spaceDividerLarge {
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+.githubActivityDirective {
+    float: none !important;
+    width: 90% !important;
+    max-width: 300px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+
+    .github-activity-header {
+        float: none;
+        height: 150px;
+    }
+
+    .github-activity-row {
+        float: none;
+        height: 125px;
+    }
+}
+
+ /* headers */
+ h1
+ {
+   text-align: center;
+   margin: 2%;
+ }
+
+ h2
+ {
+   text-align: center;
+   margin: 1%;
+ }
+
+ .siteIntro {
+     max-width: 1000px;
+     margin-left: auto;
+     margin-right: auto;
+ }
+
+ /* headers that also feature a download */
+ .titleDownload
+ {
+   text-align: center;
+ }
+
+ /*Links*/
+ a
+ {
+     color: $links;
+ }
+
+ a:visited
+ {
+     color: $visitedLinks;
+ }
+
+ //Fancy Image stuff
+ img {
+
+     //Transition speed
+     $transitionSpeed: .25s;
+
+     opacity: 1;
+
+     -webkit-transition: opacity $transitionSpeed ease-in-out;
+    -moz-transition: opacity $transitionSpeed ease-in-out;
+    -o-transition: opacity $transitionSpeed ease-in-out;
+    transition: opacity $transitionSpeed ease-in-out;
+
+ }
+
+ a {
+     img {
+         &:hover {
+              opacity: .75;
+          }
+     }
+ }
+
+ .container-narrow > hr {
+   margin: 30px 0;
+ }
+
+ //Main profile picture, center with the welcome
+ .pixelAaron {
+     margin-right: 50px;
+ }
+
+ .home {
+
+     p {
+         text-align: center;
+     }
+ }
+
+ /*resume jumbotron (make it look like papery) */
+ .resume
+ {
+     text-align: left;
+     color: $standard;
+ }
+
+ .Intro
+ {
+   text-align: center;
+   margin: 0 auto;
+ }
+
+//Projects
+//Our Flexboxes for projects
+.columns {
+    display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   width: 100%;
+   justify-content: center;
+
+    .app {
+        max-width: $appWidth;
+
+        margin-left: 25px;
+        margin-right: 25px;
+
+        p {
+            text-align: left;
+        }
+    }
+
+    .web {
+        @extend .app;
+
+        max-width: $webWidth;
+    }
+
+    li {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+//List styles
+.aboutList {
+
+    text-align: left;
+    margin-left: 35px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    li {
+        list-style-type: initial;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+
+ /* Contact page paragraph */
+ .contact
+ {
+   padding: 15px;
+   text-align: left;
+ }
+
+ /* Main links to my dev stuff on home*/
+ .devLinks
+ {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 10px;
+
+   a, iframe {
+       vertical-align: middle;
+       margin: 5px;
+
+       width: 166px;
+   }
+
+   .github-button {
+       width: 200px;
+
+       //Center when on a new line
+       @media screen and (max-width: 685px) {
+          margin-left: 20px;
+      }
+   }
+ }
+
+ /* Two Columns / Responsive: Portrait tablets and up */
+ @media screen and (min-width: 768px) {
+
+    //Container overrides
+   .container {
+       width: $pageWidth;
+       max-width: $pageWidth;
+   }
+}
+
+//Mobile Devies, make cards wider
+@media screen and (max-width: 768px) {
+
+    .columns {
+
+        .app {
+            max-width: $appWidth;
+
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+    }
+}

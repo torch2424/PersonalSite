@@ -41,7 +41,6 @@ after_success:
         echo "Packaging built project";
         mkdir projectBuild;
         cp -R dist projectBuild;
-        cp -R app/views projectBuild/dist;
         cp -R app/images/* projectBuild/dist/images;
         echo "Listing Final Directory and it's contents before taring:";
         pwd;

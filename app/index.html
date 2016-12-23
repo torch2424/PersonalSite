@@ -1,90 +1,101 @@
 <!doctype html>
-<html class="no-js">
-  <head>
-    <meta charset="utf-8">
-    <title>Aaron Turner</title>
-    <meta name="description" content="Homepage and Portfolio for Aaron Turner">
-    <meta name="viewport" content="width=device-width">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css(.) styles/vendor.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/materialize/dist/css/materialize.min.css" />
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
+<html>
 
-    <!--Microdata for SEO -->
-    <!-- fragment: microdata -->
+<head>
+  <meta charset="utf-8">
+  <title>Aaron Turner</title>
+  <meta name="description" content="Homepage and Portfolio for Aaron Turner">
+  <meta name="viewport" content="width=device-width">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css(.) styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/materialize/dist/css/materialize.min.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
 
-        <script type="application/ld+json">
-        {
-          "@context" : "http://schema.org",
-          "@type" : "Person",
-          "name" : "Aaron Turner",
-          "sameAs" : [
-            "https://twitter.com/nosInfinite",
-            "https://github.com/torch2424"
-          ]
-        }
-        </script>
+  <!--Microdata for SEO -->
+  <!-- fragment: microdata -->
 
-        <!-- /fragment: microdata -->
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Aaron Turner",
+      "sameAs": [
+        "https://twitter.com/nosInfinite",
+        "https://github.com/torch2424"
+      ]
+    }
+  </script>
+
+  <!-- /fragment: microdata -->
 
 
-  </head>
-  <body ng-app="personalSiteApp">
-    <!--[if lt IE 7]>
+</head>
+
+<body ng-app="personalSiteApp">
+  <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <!-- Include the navbar -->
-    <div ng-include="'/views/templates/navbar.html'">
-    </div>
+  <!-- Include the navbar -->
+  <div ng-include="'/views/templates/navbar.html'">
+  </div>
 
-    <div class="container">
+  <div class="container">
     <div ng-view=""></div>
-    </div>
+  </div>
 
-    <!-- Include the footer -->
-    <div ng-include="'/views/templates/footer.html'">
-    </div>
+  <div class="spaceDividerLarge"></div>
 
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
-       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
-       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
-       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
-       }(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-       ga('create', 'UA-75362326-1');
-       ga('send', 'pageview');
-    </script>
-
-    <!-- build:js(.) scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-    <script src="bower_components/angular-resource/angular-resource.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="bower_components/angular-touch/angular-touch.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
+  <!-- Include the footer -->
+  <div ng-include="'/views/templates/footer.html'">
+  </div>
 
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
-        <script src="scripts/controllers/nav.js"></script>
-        <script src="scripts/controllers/android.js"></script>
-        <script src="scripts/controllers/webdev.js"></script>
-        <script src="scripts/controllers/contact.js"></script>
-        <script src="scripts/controllers/gamedev.js"></script>
-        <!-- endbuild -->
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+  <script>
+    ! function(A, n, g, u, l, a, r) {
+      A.GoogleAnalyticsObject = l, A[l] = A[l] || function() {
+          (A[l].q = A[l].q || []).push(arguments)
+        }, A[l].l = +new Date, a = n.createElement(g),
+        r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
+    }(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-75362326-1');
+    ga('send', 'pageview');
+  </script>
+
+  <!-- build:js(.) scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/angular-touch/angular-touch.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+
+
+  <!-- build:js({.tmp,app}) scripts/scripts.js -->
+  <script src="scripts/app.js"></script>
+  <script src="scripts/controllers/main.js"></script>
+  <script src="scripts/controllers/about.js"></script>
+  <script src="scripts/controllers/nav.js"></script>
+  <script src="scripts/controllers/contact.js"></script>
+  <script src="scripts/controllers/professionalwork.js"></script>
+  <script src="scripts/controllers/personalprojects.js"></script>
+  <!-- endbuild -->
+
+  <!-- Angular github activity tracker -->
+  <link rel="stylesheet" href="bower_components/angular-github-activity/release/css/github-activity.min.css">
+  </script>
+  <script src="bower_components/angular-github-activity/release/js/github-activity.min.js"></script>
 </body>
+
 </html>
